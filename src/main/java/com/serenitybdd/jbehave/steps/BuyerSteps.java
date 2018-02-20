@@ -2,16 +2,9 @@ package com.serenitybdd.jbehave.steps;
 
 import com.serenitybdd.jbehave.pages.MainPage;
 import com.serenitybdd.jbehave.pages.ShoppingCartPage;
-import io.vavr.API;
 import net.thucydides.core.annotations.Step;
-import org.hamcrest.Matcher;
 
 import java.util.List;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.collection.IsIterableContainingInAnyOrder.containsInAnyOrder;
-
-
 
 public class BuyerSteps  {
     MainPage mainPage;
@@ -39,7 +32,7 @@ public class BuyerSteps  {
     }
 
     @Step
-    public void check_items_in_shopping_cart(){
-     assertThat(shoppingCartPage.getItemsInCart(), containsInAnyOrder("Nineteen Eighty-Four","The Da Vinci Code"));
+    public List<String> check_items_in_shopping_cart(){
+        return shoppingCartPage.getItemName();
     }
 }

@@ -8,4 +8,4 @@ Scenario: Should add item into shopping cart
 Given I have opened home page
 When I click on Add to Shopping Cart for '1984' book
 And I click on Add to Shopping Cart butoon for 'The Code Da Vinci' book
-Then Chosen items should appear in cart
+Then Chosen 'Nineteen Eighty-Four' and 'The Da Vinci Code' items should appear in cart
